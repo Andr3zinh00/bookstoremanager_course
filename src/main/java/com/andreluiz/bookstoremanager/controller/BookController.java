@@ -20,6 +20,6 @@ public class BookController {
     })
     @GetMapping
     public String helloWorld() {
-        return "HelloWorld";
+        return "Hello_World PR_EXAMPLE";
     }
 }
