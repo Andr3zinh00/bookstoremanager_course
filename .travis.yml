@@ -5,9 +5,9 @@ jdk: openjdk11
 install: true
 addons:
   sonarcloud:
-    organization: %SONAR_ORGANIZATION%
+    organization: $SONAR_ORGANIZATION$
     token:
-      secure: %SONAR_TOKEN%
+      secure: $SONAR_TOKEN
 script:
     - mvn clean package sonar:sonar -P sonar
 before_script:
