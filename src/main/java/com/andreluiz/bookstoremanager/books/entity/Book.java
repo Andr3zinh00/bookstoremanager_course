@@ -1,9 +1,11 @@
 package com.andreluiz.bookstoremanager.books.entity;
 
+import com.andreluiz.bookstoremanager.auditable.Auditable;
 import com.andreluiz.bookstoremanager.author.entity.Author;
 import com.andreluiz.bookstoremanager.publishers.entity.Publisher;
 import com.andreluiz.bookstoremanager.user.entity.User;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -13,7 +15,8 @@ import java.time.LocalDate;
  */
 @Entity
 @Data
-public class Book {
+@EqualsAndHashCode(callSuper = true)
+public class Book extends Auditable {
 
 
     @Id

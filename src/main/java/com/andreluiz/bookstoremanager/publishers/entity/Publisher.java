@@ -1,7 +1,9 @@
 package com.andreluiz.bookstoremanager.publishers.entity;
 
+import com.andreluiz.bookstoremanager.auditable.Auditable;
 import com.andreluiz.bookstoremanager.books.entity.Book;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -10,9 +12,10 @@ import java.util.List;
 /**
  * @author andr3z0
  */
+@EqualsAndHashCode(callSuper = true)
 @Entity
 @Data
-public class Publisher {
+public class Publisher extends Auditable {
 
 
     @Id
