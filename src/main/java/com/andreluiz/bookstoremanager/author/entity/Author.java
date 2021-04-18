@@ -1,7 +1,9 @@
 package com.andreluiz.bookstoremanager.author.entity;
 
+import com.andreluiz.bookstoremanager.auditable.Auditable;
 import com.andreluiz.bookstoremanager.books.entity.Book;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 import java.util.List;
@@ -11,7 +13,8 @@ import java.util.List;
  */
 @Entity
 @Data
-public class Author {
+@EqualsAndHashCode(callSuper = true)
+public class Author extends Auditable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
