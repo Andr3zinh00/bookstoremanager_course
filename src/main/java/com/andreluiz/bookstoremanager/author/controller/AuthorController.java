@@ -13,6 +13,7 @@ public class AuthorController implements AuthorControllerDocs {
     final AuthorService authorService;
 
 
+    @Autowired
     public AuthorController(AuthorService authorService) {
         this.authorService = authorService;
     }
